@@ -42,17 +42,8 @@ namespace StupendousCounter.Core.ViewModel
             ////    SimpleIoc.Default.Register<IDataService, DataService>();
             ////}
 
-            SimpleIoc.Default.Register<MainViewModel>();
         }
 
-        public MainViewModel Main
-        {
-            get
-            {
-                return ServiceLocator.Current.GetInstance<MainViewModel>();
-            }
-        }
-        
         public static void Cleanup()
         {
             // TODO Clear the ViewModels
