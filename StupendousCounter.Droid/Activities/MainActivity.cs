@@ -13,7 +13,7 @@ using Android.Support.Design.Widget;
 
 namespace StupendousCounter.Droid.Activities
 {
-	[Activity(Label = "Home", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, Icon = "@drawable/Icon")]
+	[Activity(Label = "@string/app_name", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, Icon = "@drawable/Icon")]
 	public class MainActivity : BaseActivity
 	{
 
