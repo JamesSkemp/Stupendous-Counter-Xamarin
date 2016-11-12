@@ -8,6 +8,8 @@ namespace StupendousCounter.Core
 {
 	public class DatabaseHelper : IDatabaseHelper
 	{
+		private static string _dbPath;
+
 		public async Task AddOrUpdateCounterAsync(Counter counter)
 		{
 			throw new NotImplementedException();
@@ -30,7 +32,12 @@ namespace StupendousCounter.Core
 
 		public static void CreateDatabase(string dbPath)
 		{
-
+			_dbPath = dbPath;
+			using (var connection = new SQLite.SQLiteConnection(dbPath, SQLite.SQLiteOpenFlags.Create | SQLite.SQLiteOpenFlags.ReadWrite))
+			{
+				connection.CreateTable<Counter>();
+				connection.CreateTable<CounterIncrementHistory>();
+			}
 		}
 	}
 }

@@ -10,6 +10,8 @@ using StupendousCounter.Droid.Fragments;
 using Android.Support.V7.App;
 using Android.Support.V4.View;
 using Android.Support.Design.Widget;
+using StupendousCounter.Core;
+using System.IO;
 
 namespace StupendousCounter.Droid.Activities
 {
@@ -32,6 +34,10 @@ namespace StupendousCounter.Droid.Activities
 		{
 			base.OnCreate(savedInstanceState);
 
+			// Create reference to SQLite database.
+			var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+			var dbPath = Path.Combine(path, "counters.db3");
+			DatabaseHelper.CreateDatabase(dbPath);
 
 			drawerLayout = this.FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
 

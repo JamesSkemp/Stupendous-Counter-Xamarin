@@ -147,5 +147,10 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\StupendousCounter.Core\StupendousCounter.Core.csproj">
+      <Project>{79B3DF52-BEB3-436C-A9AD-909596CED820}</Project>
+      <Name>StupendousCounter.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
