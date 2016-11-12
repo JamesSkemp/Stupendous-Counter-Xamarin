@@ -42,7 +42,11 @@ namespace StupendousCounter.Core.ViewModel
             ////    SimpleIoc.Default.Register<IDataService, DataService>();
             ////}
 
+            SimpleIoc.Default.Register<IDatabaseHelper>(() => new DatabaseHelper());
+            SimpleIoc.Default.Register<CountersViewModel>();
         }
+
+        public static CountersViewModel Counters => ServiceLocator.Current.GetInstance<CountersViewModel>();
 
         public static void Cleanup()
         {
