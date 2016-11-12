@@ -36,6 +36,8 @@
   <ItemGroup>
     <Compile Include="Counter.cs" />
     <Compile Include="CounterIncrementHistory.cs" />
+    <Compile Include="DatabaseHelper.cs" />
+    <Compile Include="IDatabaseHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
