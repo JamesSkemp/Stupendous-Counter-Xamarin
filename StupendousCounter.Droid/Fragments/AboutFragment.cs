@@ -4,7 +4,7 @@ using Android.Views;
 
 namespace StupendousCounter.Droid.Fragments
 {
-	public class Fragment1 : Fragment
+	public class AboutFragment : Fragment
 	{
 		public override void OnCreate(Bundle savedInstanceState)
 		{
@@ -13,17 +13,17 @@ namespace StupendousCounter.Droid.Fragments
 			// Create your fragment here
 		}
 
-		public static Fragment1 NewInstance()
+		public static AboutFragment NewInstance()
 		{
-			var frag1 = new Fragment1 { Arguments = new Bundle() };
-			return frag1;
+			var frag2 = new AboutFragment { Arguments = new Bundle() };
+			return frag2;
 		}
 
 
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
 			var ignored = base.OnCreateView(inflater, container, savedInstanceState);
-			return inflater.Inflate(Resource.Layout.fragment1, null);
+			return inflater.Inflate(Resource.Layout.about_fragment, null);
 		}
 	}
 }

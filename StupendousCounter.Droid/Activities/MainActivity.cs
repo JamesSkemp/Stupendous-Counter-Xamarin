@@ -54,10 +54,10 @@ namespace StupendousCounter.Droid.Activities
 
 				switch (e.MenuItem.ItemId)
 				{
-					case Resource.Id.nav_home_1:
+					case Resource.Id.nav_counters:
 						ListItemClicked(0);
 						break;
-					case Resource.Id.nav_home_2:
+					case Resource.Id.nav_about:
 						ListItemClicked(1);
 						break;
 				}
@@ -89,10 +89,10 @@ namespace StupendousCounter.Droid.Activities
 			switch (position)
 			{
 				case 0:
-					fragment = Fragment1.NewInstance();
+					fragment = CountersFragment.NewInstance();
 					break;
 				case 1:
-					fragment = Fragment2.NewInstance();
+					fragment = AboutFragment.NewInstance();
 					break;
 			}
 
